@@ -1,3 +1,3 @@
 
 URL: 
-https://admission.snkitinstitute.com/usharbagicha.github.io/#contact
+https://admission.snkitinstitute.com/usharbagicha.github.io
