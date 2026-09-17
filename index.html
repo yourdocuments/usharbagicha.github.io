@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Ushar Bagicha | A Garden of Love</title>
 
   <meta
     name="description"
-    content="Ushar Bagicha — beautiful indoor plants, flowers and green living inspired by love."
-  />
+    content="Ushar Bagicha — a garden of memories, love, flowers and beautiful green living."
+  >
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
     rel="stylesheet"
-  />
+  >
 
   <style>
     :root {
@@ -132,9 +132,9 @@
     }
 
     .btn-light {
-      background: rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.12);
       color: var(--white);
-      border-color: rgba(255, 255, 255, 0.5);
+      border-color: rgba(255, 255, 255, 0.55);
       backdrop-filter: blur(10px);
     }
 
@@ -236,9 +236,8 @@
       background:
         linear-gradient(
           90deg,
-          rgba(8, 22, 16, 0.82) 0%,
-          rgba(8, 22, 16, 0.48) 48%,
-          rgba(8, 22, 16, 0.18) 100%
+          rgba(5, 12, 9, 0.08) 0%,
+          rgba(5, 12, 9, 0.08) 100%
         ),
         url("usha-hero.png") center center / cover no-repeat;
     }
@@ -249,10 +248,11 @@
       inset: 0;
 
       background:
-        radial-gradient(
-          circle at 72% 38%,
-          rgba(255, 190, 100, 0.12),
-          transparent 30%
+        linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.10) 0%,
+          rgba(0, 0, 0, 0.04) 45%,
+          rgba(0, 0, 0, 0.22) 100%
         );
 
       pointer-events: none;
@@ -262,14 +262,16 @@
       content: "";
       position: absolute;
 
-      width: 520px;
-      height: 520px;
+      inset: auto 0 0 0;
 
-      right: -260px;
-      bottom: -280px;
+      height: 230px;
 
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      border-radius: 50%;
+      background:
+        linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.48),
+          transparent
+        );
 
       pointer-events: none;
     }
@@ -279,37 +281,40 @@
       z-index: 3;
 
       max-width: 650px;
+      margin-left: auto;
+
       padding-top: 90px;
     }
 
     .hero .eyebrow {
-      color: #e6c88f;
-
+      color: #f0c77d;
       font-size: 0.78rem;
       letter-spacing: 4px;
       font-weight: 700;
       text-transform: uppercase;
-
       margin-bottom: 18px;
+      text-shadow: 0 3px 15px rgba(0, 0, 0, 0.55);
     }
 
     .hero h1 {
-      font-size: clamp(3.2rem, 7vw, 6.5rem);
+      font-size: clamp(3.2rem, 6vw, 5.6rem);
       line-height: 1.02;
-
       margin-bottom: 24px;
 
+      color: #ffffff;
+
       text-shadow:
-        0 8px 35px rgba(0, 0, 0, 0.35);
+        0 5px 25px rgba(0, 0, 0, 0.6),
+        0 2px 5px rgba(0, 0, 0, 0.4);
     }
 
     .hero h1 span {
       display: block;
 
-      color: #e6c88f;
+      color: #f2ca7e;
 
       font-family: "DM Sans", sans-serif;
-      font-size: clamp(0.85rem, 2vw, 1.2rem);
+      font-size: clamp(0.8rem, 2vw, 1.1rem);
 
       font-weight: 600;
       letter-spacing: 4px;
@@ -320,17 +325,17 @@
     }
 
     .hero p {
-      max-width: 560px;
+      max-width: 590px;
 
-      color: rgba(255, 255, 255, 0.88);
+      color: rgba(255, 255, 255, 0.96);
 
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       line-height: 1.85;
 
       margin-bottom: 32px;
 
       text-shadow:
-        0 3px 15px rgba(0, 0, 0, 0.4);
+        0 3px 14px rgba(0, 0, 0, 0.7);
     }
 
     .hero-actions {
@@ -340,25 +345,25 @@
     }
 
     .hero-actions .btn-primary {
-      background: #1d6945;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #21834e;
+      border: 1px solid rgba(255, 255, 255, 0.2);
 
       box-shadow:
-        0 12px 35px rgba(0, 0, 0, 0.25);
+        0 12px 35px rgba(0, 0, 0, 0.3);
     }
 
     .hero-actions .btn-primary:hover {
-      background: #2d8057;
+      background: #2da862;
       transform: translateY(-3px);
     }
 
     .hero-actions .btn-light {
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(0, 0, 0, 0.12);
+      border-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
 
-      border-color:
-        rgba(255, 255, 255, 0.65);
-
-      backdrop-filter: blur(12px);
+      box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
     }
 
     .hero-actions .btn-light:hover {
@@ -373,68 +378,18 @@
       align-items: center;
       gap: 12px;
 
-      color: rgba(255, 255, 255, 0.78);
+      color: rgba(255, 255, 255, 0.95);
 
       font-family: "Playfair Display", serif;
       font-size: 1rem;
 
       text-shadow:
-        0 3px 12px rgba(0, 0, 0, 0.4);
+        0 3px 12px rgba(0, 0, 0, 0.65);
     }
 
     .hero-note span {
-      color: #e6c88f;
+      color: #f1c879;
       font-size: 1.6rem;
-    }
-
-    /* Usha memory glow */
-    .hero-memory {
-      position: absolute;
-
-      right: 10%;
-      top: 24%;
-
-      width: 280px;
-      height: 420px;
-
-      z-index: 2;
-
-      pointer-events: none;
-    }
-
-    .hero-memory::before {
-      content: "";
-
-      position: absolute;
-      inset: -80px;
-
-      background:
-        radial-gradient(
-          circle,
-          rgba(255, 214, 157, 0.28),
-          transparent 68%
-        );
-
-      filter: blur(25px);
-    }
-
-    .hero-memory::after {
-      content: "Usha";
-
-      position: absolute;
-
-      bottom: -48px;
-      left: 50%;
-
-      transform: translateX(-50%);
-
-      color: rgba(255, 255, 255, 0.42);
-
-      font-family: "Playfair Display", serif;
-      font-size: 1rem;
-      letter-spacing: 4px;
-
-      opacity: 0.8;
     }
 
     /* =========================
@@ -975,33 +930,35 @@
         display: none;
       }
 
-      /* Mobile Cinematic Hero */
-
       .hero {
-        min-height: 760px;
+        min-height: 780px;
+
+        align-items: flex-end;
 
         background-position:
-          62% center;
+          42% center;
       }
 
       .hero::before {
         background:
           linear-gradient(
             180deg,
-            rgba(7, 24, 16, 0.82),
-            rgba(7, 24, 16, 0.48) 45%,
-            rgba(7, 24, 16, 0.78)
+            rgba(0, 0, 0, 0.08),
+            rgba(0, 0, 0, 0.02) 38%,
+            rgba(0, 0, 0, 0.68) 100%
           );
       }
 
       .hero-content {
-        padding-top: 80px;
+        padding-top: 100px;
+        padding-bottom: 60px;
         max-width: 100%;
+        margin-left: 0;
       }
 
       .hero h1 {
         font-size:
-          clamp(3rem, 14vw, 4.5rem);
+          clamp(2.7rem, 13vw, 4.5rem);
       }
 
       .hero p {
@@ -1019,13 +976,6 @@
 
       .hero-note {
         font-size: 0.9rem;
-      }
-
-      .hero-memory {
-        right: -80px;
-        top: 38%;
-
-        transform: scale(0.7);
       }
 
       .story-grid,
@@ -1068,14 +1018,15 @@
       }
 
       .hero {
-        min-height: 780px;
+        min-height: 800px;
 
         background-position:
-          64% center;
+          42% center;
       }
 
       .hero-content {
-        padding-top: 90px;
+        padding-top: 100px;
+        padding-bottom: 45px;
       }
 
       .hero h1 {
@@ -1170,6 +1121,7 @@
         class="btn btn-light nav-button"
         href="https://wa.me/8801705633700?text=Hello%20Ushar%20Bagicha%2C%20I%20want%20to%20order%20a%20plant."
         target="_blank"
+        rel="noopener noreferrer"
       >
         Order Now
       </a>
@@ -1182,12 +1134,10 @@
   <main>
 
     <!-- =========================
-         CINEMATIC HERO
+         HERO
     ========================= -->
 
     <section class="hero" id="home">
-
-      <div class="hero-memory"></div>
 
       <div class="container">
 
@@ -1219,14 +1169,14 @@
               href="#plants"
               class="btn btn-primary"
             >
-              Explore Our Garden 🌿
+              🌿 Explore Our Garden →
             </a>
 
             <a
               href="#contact"
               class="btn btn-light"
             >
-              Order a Rose 🌹
+              🌹 Order a Rose →
             </a>
 
           </div>
@@ -1262,18 +1212,15 @@
           <img
             src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?auto=format&fit=crop&w=1000&q=85"
             alt="Beautiful green plant"
-          />
+          >
 
           <div class="story-badge">
-
-            Love<br />
-            Never<br />
+            Love<br>
+            Never<br>
             Fades
-
           </div>
 
         </div>
-
 
         <div class="story-content">
 
@@ -1348,8 +1295,6 @@
         <div class="product-grid">
 
 
-          <!-- Money Plant -->
-
           <article class="product-card">
 
             <div class="product-image">
@@ -1361,7 +1306,7 @@
               <img
                 src="https://images.unsplash.com/photo-1593691509543-c55fb32e5cee?auto=format&fit=crop&w=800&q=85"
                 alt="Money Plant"
-              />
+              >
 
             </div>
 
@@ -1386,6 +1331,7 @@
                   class="order-link"
                   href="https://wa.me/8801705633700?text=I%20want%20to%20order%20Money%20Plant."
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Order Now →
                 </a>
@@ -1396,8 +1342,6 @@
 
           </article>
 
-
-          <!-- Snake Plant -->
 
           <article class="product-card">
 
@@ -1410,7 +1354,7 @@
               <img
                 src="https://images.unsplash.com/photo-1593482892290-f54927ae1bb6?auto=format&fit=crop&w=800&q=85"
                 alt="Snake Plant"
-              />
+              >
 
             </div>
 
@@ -1435,6 +1379,7 @@
                   class="order-link"
                   href="https://wa.me/8801705633700?text=I%20want%20to%20order%20Snake%20Plant."
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Order Now →
                 </a>
@@ -1445,8 +1390,6 @@
 
           </article>
 
-
-          <!-- Peace Lily -->
 
           <article class="product-card">
 
@@ -1459,7 +1402,7 @@
               <img
                 src="https://images.unsplash.com/photo-1593691509543-c55fb32e5cee?auto=format&fit=crop&w=800&q=85"
                 alt="Peace Lily"
-              />
+              >
 
             </div>
 
@@ -1484,6 +1427,7 @@
                   class="order-link"
                   href="https://wa.me/8801705633700?text=I%20want%20to%20order%20Peace%20Lily."
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Order Now →
                 </a>
@@ -1494,8 +1438,6 @@
 
           </article>
 
-
-          <!-- Spider Plant -->
 
           <article class="product-card">
 
@@ -1508,7 +1450,7 @@
               <img
                 src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=800&q=85"
                 alt="Spider Plant"
-              />
+              >
 
             </div>
 
@@ -1533,6 +1475,7 @@
                   class="order-link"
                   href="https://wa.me/8801705633700?text=I%20want%20to%20order%20Spider%20Plant."
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Order Now →
                 </a>
@@ -1783,7 +1726,7 @@
             <img
               src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1000&q=85"
               alt="Green indoor plants"
-            />
+            >
 
           </div>
 
@@ -1793,7 +1736,7 @@
             <img
               src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=800&q=85"
               alt="Plant in a pot"
-            />
+            >
 
           </div>
 
@@ -1803,7 +1746,7 @@
             <img
               src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=85"
               alt="Beautiful plant leaves"
-            />
+            >
 
           </div>
 
@@ -1813,7 +1756,7 @@
             <img
               src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?auto=format&fit=crop&w=800&q=85"
               alt="Plants at home"
-            />
+            >
 
           </div>
 
@@ -1823,7 +1766,7 @@
             <img
               src="https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?auto=format&fit=crop&w=800&q=85"
               alt="Small potted plants"
-            />
+            >
 
           </div>
 
@@ -1870,6 +1813,7 @@
             class="btn btn-light"
             href="https://wa.me/8801705633700?text=Hello%20Ushar%20Bagicha%2C%20I%20want%20to%20know%20more%20about%20your%20plants."
             target="_blank"
+            rel="noopener noreferrer"
           >
             Chat on WhatsApp →
           </a>
@@ -2037,6 +1981,7 @@
               <a
                 href="https://wa.me/8801705633700"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 WhatsApp Us
               </a>
@@ -2071,6 +2016,7 @@
     class="whatsapp-float"
     href="https://wa.me/8801705633700?text=Hello%20Ushar%20Bagicha%2C%20I%20want%20to%20order%20a%20plant."
     target="_blank"
+    rel="noopener noreferrer"
     aria-label="Chat on WhatsApp"
   >
     ☎
