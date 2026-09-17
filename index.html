@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Ushar Bagicha | A Garden of Love</title>
+
   <meta
     name="description"
     content="Ushar Bagicha — beautiful indoor plants, flowers and green living inspired by love."
@@ -12,6 +13,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
     rel="stylesheet"
@@ -152,7 +154,10 @@
       color: var(--white);
     }
 
-    /* Header */
+    /* =========================
+       HEADER
+    ========================== */
+
     header {
       position: absolute;
       top: 0;
@@ -216,35 +221,70 @@
       cursor: pointer;
     }
 
-    /* Hero */
+    /* =========================
+       EMOTIONAL HERO
+    ========================== */
+
     .hero {
-      min-height: 780px;
+      min-height: 820px;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
+      isolation: isolate;
+
       background:
-        linear-gradient(90deg, rgba(9, 31, 20, 0.92), rgba(9, 31, 20, 0.55)),
-        url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=2000&q=90")
+        linear-gradient(
+          90deg,
+          rgba(20, 13, 10, 0.92) 0%,
+          rgba(32, 20, 13, 0.72) 42%,
+          rgba(53, 32, 18, 0.28) 100%
+        ),
+        linear-gradient(
+          180deg,
+          rgba(20, 12, 8, 0.15),
+          rgba(19, 11, 7, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2200&q=90")
         center/cover;
+
       color: var(--white);
     }
+
+    /* Warm sunset glow */
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      right: 8%;
+      top: 9%;
+      background: rgba(232, 169, 91, 0.22);
+      filter: blur(45px);
+      z-index: -1;
+    }
+
+    /* Bottom desert haze */
 
     .hero::after {
       content: "";
       position: absolute;
-      width: 380px;
-      height: 380px;
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      left: -5%;
+      right: -5%;
+      bottom: -120px;
+      height: 260px;
       border-radius: 50%;
-      right: -160px;
-      bottom: -150px;
+      background: rgba(20, 10, 5, 0.45);
+      filter: blur(15px);
+      z-index: 1;
     }
 
     .hero-content {
       position: relative;
-      z-index: 2;
-      max-width: 720px;
+      z-index: 5;
+      max-width: 690px;
       padding-top: 80px;
     }
 
@@ -253,8 +293,9 @@
     }
 
     .hero h1 {
-      font-size: clamp(3rem, 7vw, 6.8rem);
+      font-size: clamp(3rem, 7vw, 6.5rem);
       margin-bottom: 20px;
+      text-shadow: 0 8px 35px rgba(0, 0, 0, 0.35);
     }
 
     .hero h1 span {
@@ -268,8 +309,8 @@
     }
 
     .hero p {
-      max-width: 570px;
-      color: rgba(255, 255, 255, 0.84);
+      max-width: 590px;
+      color: rgba(255, 255, 255, 0.86);
       font-size: 1.05rem;
       margin-bottom: 30px;
     }
@@ -294,7 +335,258 @@
       font-size: 1.4rem;
     }
 
-    /* Story */
+    /* =========================
+       EMOTIONAL BOY
+    ========================== */
+
+    .desert-character {
+      position: absolute;
+      right: 12%;
+      bottom: 0;
+      width: 250px;
+      height: 520px;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    /* Head */
+
+    .boy-head {
+      position: absolute;
+      left: 91px;
+      top: 45px;
+      width: 66px;
+      height: 76px;
+      border-radius: 48% 48% 44% 44%;
+      background: #5b3827;
+      box-shadow:
+        inset -12px -5px 0 rgba(35, 17, 9, 0.22),
+        0 10px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Hair */
+
+    .boy-head::before {
+      content: "";
+      position: absolute;
+      left: -3px;
+      top: -9px;
+      width: 71px;
+      height: 37px;
+      border-radius: 50% 50% 25% 25%;
+      background: #21140f;
+    }
+
+    /* Neck */
+
+    .boy-neck {
+      position: absolute;
+      left: 111px;
+      top: 110px;
+      width: 29px;
+      height: 38px;
+      background: #51301f;
+      border-radius: 8px;
+    }
+
+    /* Body */
+
+    .boy-body {
+      position: absolute;
+      left: 70px;
+      top: 133px;
+      width: 112px;
+      height: 250px;
+      border-radius: 45px 45px 18px 18px;
+      background:
+        linear-gradient(
+          90deg,
+          #161414,
+          #302724 48%,
+          #171515
+        );
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Left arm */
+
+    .boy-arm-left {
+      position: absolute;
+      left: 54px;
+      top: 151px;
+      width: 31px;
+      height: 185px;
+      border-radius: 25px;
+      background: #241c19;
+      transform: rotate(8deg);
+      transform-origin: top center;
+    }
+
+    /* Right arm */
+
+    .boy-arm-right {
+      position: absolute;
+      left: 165px;
+      top: 150px;
+      width: 31px;
+      height: 185px;
+      border-radius: 25px;
+      background: #241c19;
+      transform: rotate(-17deg);
+      transform-origin: top center;
+    }
+
+    /* Hand holding rose */
+
+    .boy-hand {
+      position: absolute;
+      right: 7px;
+      top: 315px;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background: #5b3827;
+      z-index: 4;
+    }
+
+    /* Legs */
+
+    .boy-leg-left,
+    .boy-leg-right {
+      position: absolute;
+      top: 365px;
+      width: 43px;
+      height: 150px;
+      border-radius: 25px 25px 10px 10px;
+      background: #171515;
+    }
+
+    .boy-leg-left {
+      left: 76px;
+      transform: rotate(3deg);
+    }
+
+    .boy-leg-right {
+      left: 132px;
+      transform: rotate(-4deg);
+    }
+
+    /* Shoes */
+
+    .boy-shoe-left,
+    .boy-shoe-right {
+      position: absolute;
+      top: 493px;
+      width: 62px;
+      height: 24px;
+      border-radius: 50% 60% 35% 35%;
+      background: #100d0c;
+    }
+
+    .boy-shoe-left {
+      left: 52px;
+    }
+
+    .boy-shoe-right {
+      left: 126px;
+    }
+
+    /* Rose */
+
+    .held-rose {
+      position: absolute;
+      right: -9px;
+      top: 248px;
+      width: 100px;
+      height: 130px;
+      transform: rotate(-8deg);
+      z-index: 6;
+    }
+
+    .rose-flower {
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 55px;
+      filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.3));
+    }
+
+    .rose-stem {
+      position: absolute;
+      right: 35px;
+      top: 52px;
+      width: 4px;
+      height: 85px;
+      border-radius: 10px;
+      background: #476b3f;
+      transform: rotate(10deg);
+    }
+
+    .rose-leaf {
+      position: absolute;
+      right: 32px;
+      top: 76px;
+      width: 27px;
+      height: 13px;
+      border-radius: 100% 0;
+      background: #587a4e;
+      transform: rotate(-25deg);
+    }
+
+    /* =========================
+       FALLING ROSE
+    ========================== */
+
+    .falling-rose {
+      position: absolute;
+      right: 33%;
+      top: 25%;
+      font-size: 42px;
+      z-index: 4;
+      opacity: 0.88;
+      filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.35));
+      animation: fallingRose 5s ease-in-out infinite;
+    }
+
+    .falling-rose.two {
+      right: 43%;
+      top: 37%;
+      font-size: 24px;
+      opacity: 0.45;
+      animation-delay: 1.5s;
+    }
+
+    .falling-rose.three {
+      right: 25%;
+      top: 48%;
+      font-size: 18px;
+      opacity: 0.3;
+      animation-delay: 2.5s;
+    }
+
+    @keyframes fallingRose {
+      0% {
+        transform: translate3d(0, -20px, 0) rotate(0deg);
+      }
+
+      35% {
+        transform: translate3d(-30px, 100px, 0) rotate(80deg);
+      }
+
+      70% {
+        transform: translate3d(20px, 220px, 0) rotate(180deg);
+      }
+
+      100% {
+        transform: translate3d(-25px, 360px, 0) rotate(270deg);
+        opacity: 0;
+      }
+    }
+
+    /* =========================
+       STORY
+    ========================== */
+
     .story {
       background: var(--white);
     }
@@ -347,7 +639,10 @@
       color: var(--dark-green);
     }
 
-    /* Products */
+    /* =========================
+       PRODUCTS
+    ========================== */
+
     .products {
       background: var(--cream);
     }
@@ -396,6 +691,7 @@
       border-radius: 50px;
       font-size: 0.72rem;
       font-weight: 700;
+      z-index: 2;
     }
 
     .product-info {
@@ -434,7 +730,10 @@
       border-bottom: 1px solid var(--gold);
     }
 
-    /* Features */
+    /* =========================
+       FEATURES
+    ========================== */
+
     .features {
       background: var(--dark-green);
       color: var(--white);
@@ -482,7 +781,10 @@
       font-size: 0.88rem;
     }
 
-    /* Care */
+    /* =========================
+       CARE
+    ========================== */
+
     .care {
       background: var(--white);
     }
@@ -517,7 +819,10 @@
       font-size: 0.9rem;
     }
 
-    /* Gallery */
+    /* =========================
+       GALLERY
+    ========================== */
+
     .gallery {
       background: var(--cream);
     }
@@ -547,16 +852,24 @@
       transform: scale(1.08);
     }
 
-    /* Contact */
+    /* =========================
+       CONTACT
+    ========================== */
+
     .contact {
       background: var(--white);
     }
 
     .contact-box {
       background:
-        linear-gradient(120deg, rgba(16, 41, 29, 0.96), rgba(28, 73, 51, 0.9)),
+        linear-gradient(
+          120deg,
+          rgba(16, 41, 29, 0.96),
+          rgba(28, 73, 51, 0.9)
+        ),
         url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1600&q=80")
         center/cover;
+
       color: var(--white);
       border-radius: 30px;
       padding: 65px;
@@ -576,7 +889,10 @@
       max-width: 600px;
     }
 
-    /* Footer */
+    /* =========================
+       FOOTER
+    ========================== */
+
     footer {
       background: var(--deep-green);
       color: var(--white);
@@ -648,7 +964,10 @@
       font-size: 0.8rem;
     }
 
-    /* Floating WhatsApp */
+    /* =========================
+       FLOATING WHATSAPP
+    ========================== */
+
     .whatsapp-float {
       position: fixed;
       right: 22px;
@@ -670,7 +989,10 @@
       transform: translateY(-5px) scale(1.05);
     }
 
-    /* Responsive */
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
     @media (max-width: 1000px) {
       .product-grid,
       .feature-grid {
@@ -687,6 +1009,16 @@
 
       .contact-box {
         padding: 45px;
+      }
+
+      .desert-character {
+        right: 4%;
+        transform: scale(0.85);
+        transform-origin: bottom right;
+      }
+
+      .falling-rose {
+        right: 28%;
       }
     }
 
@@ -726,11 +1058,47 @@
       }
 
       .hero {
-        min-height: 720px;
+        min-height: 760px;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(15, 10, 7, 0.75),
+            rgba(23, 13, 8, 0.75)
+          ),
+          url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=90")
+          center/cover;
       }
 
       .hero-content {
         padding-top: 70px;
+        max-width: 100%;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 15vw, 5rem);
+      }
+
+      .hero p {
+        max-width: 500px;
+        font-size: 0.98rem;
+      }
+
+      .desert-character {
+        right: -12px;
+        bottom: -25px;
+        transform: scale(0.55);
+        transform-origin: bottom right;
+        opacity: 0.88;
+      }
+
+      .falling-rose {
+        right: 34%;
+        top: 31%;
+      }
+
+      .falling-rose.two {
+        right: 53%;
+        top: 43%;
       }
 
       .story-grid,
@@ -769,12 +1137,45 @@
         grid-template-columns: 1fr;
       }
 
+      .hero {
+        min-height: 730px;
+      }
+
       .hero h1 {
         font-size: 3.2rem;
       }
 
       .hero p {
         font-size: 0.95rem;
+        max-width: 100%;
+      }
+
+      .hero-actions {
+        width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-note {
+        margin-top: 28px;
+      }
+
+      .desert-character {
+        right: -40px;
+        transform: scale(0.46);
+        opacity: 0.75;
+      }
+
+      .falling-rose {
+        right: 30%;
+        top: 35%;
+        font-size: 30px;
+      }
+
+      .falling-rose.two {
+        right: 62%;
       }
 
       .gallery-grid {
@@ -789,27 +1190,29 @@
       .product-image {
         height: 300px;
       }
-
-      .btn {
-        width: 100%;
-      }
-
-      .hero-actions {
-        width: 100%;
-      }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
   <header>
     <div class="container navbar">
+
       <a href="#home" class="logo">
         USHAR BAGICHA
         <span>GREEN LIVING</span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open menu"
+      >
         ☰
       </button>
 
@@ -829,19 +1232,89 @@
       >
         Order Now
       </a>
+
     </div>
   </header>
 
+
   <main>
-    <!-- Hero -->
+
+    <!-- =========================
+         EMOTIONAL HERO
+    ========================== -->
+
     <section class="hero" id="home">
+
+      <!-- Falling roses -->
+
+      <div class="falling-rose">🌹</div>
+      <div class="falling-rose two">🌹</div>
+      <div class="falling-rose three">🌹</div>
+
+
+      <!-- Emotional Boy -->
+
+      <div
+        class="desert-character"
+        aria-hidden="true"
+      >
+
+        <div class="boy-head"></div>
+
+        <div class="boy-neck"></div>
+
+        <div class="boy-body"></div>
+
+        <div class="boy-arm-left"></div>
+
+        <div class="boy-arm-right"></div>
+
+        <div class="boy-hand"></div>
+
+        <div class="boy-leg-left"></div>
+
+        <div class="boy-leg-right"></div>
+
+        <div class="boy-shoe-left"></div>
+
+        <div class="boy-shoe-right"></div>
+
+
+        <!-- Rose in his hand -->
+
+        <div class="held-rose">
+
+          <div class="rose-flower">
+            🌹
+          </div>
+
+          <div class="rose-stem"></div>
+
+          <div class="rose-leaf"></div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Hero Content -->
+
       <div class="container">
+
         <div class="hero-content">
-          <div class="eyebrow">A Garden of Love</div>
+
+          <div class="eyebrow">
+            A Garden of Love
+          </div>
 
           <h1>
-            <span>Every Flower Reminds Me of You</span>
+
+            <span>
+              Every Flower Reminds Me of You
+            </span>
+
             USHAR BAGICHA
+
           </h1>
 
           <p>
@@ -851,50 +1324,82 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#plants" class="btn btn-primary">
+
+            <a
+              href="#plants"
+              class="btn btn-primary"
+            >
               Explore Our Garden 🌿
             </a>
 
-            <a href="#contact" class="btn btn-light">
+            <a
+              href="#contact"
+              class="btn btn-light"
+            >
               Order a Rose 🌹
             </a>
+
           </div>
 
           <div class="hero-note">
+
             <span>♡</span>
+
             Grown with care, inspired by love.
+
           </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- Story -->
+
+    <!-- =========================
+         STORY
+    ========================== -->
+
     <section class="section story" id="story">
+
       <div class="container story-grid">
+
         <div class="story-image">
+
           <img
             src="https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?auto=format&fit=crop&w=1000&q=85"
             alt="Beautiful green plant"
           />
+
           <div class="story-badge">
-            Love<br />Never<br />Fades
+            Love<br />
+            Never<br />
+            Fades
           </div>
+
         </div>
 
+
         <div class="story-content">
-          <div class="eyebrow">Our Little Story</div>
-          <h2>Some Love Stories Never Fade</h2>
+
+          <div class="eyebrow">
+            Our Little Story
+          </div>
+
+          <h2>
+            Some Love Stories Never Fade
+          </h2>
 
           <p>
-            Ushar Bagicha is more than a plant shop. It is a small
-            garden created from memories, emotions and the beauty
-            of nature.
+            Ushar Bagicha is more than a plant shop.
+            It is a small garden created from memories,
+            emotions and the beauty of nature.
           </p>
 
           <p>
             Just like a plant needs sunlight, water and patience,
-            love also needs care. Every plant we share carries a
-            little warmth, peace and a beautiful feeling.
+            love also needs care. Every plant we share carries
+            a little warmth, peace and a beautiful feeling.
           </p>
 
           <div class="quote">
@@ -902,44 +1407,83 @@
             in the heart.”
           </div>
 
-          <a href="#plants" class="btn btn-outline">
+          <a
+            href="#plants"
+            class="btn btn-outline"
+          >
             Discover Our Plants
           </a>
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- Plants -->
+
+    <!-- =========================
+         PLANTS
+    ========================== -->
+
     <section class="section products" id="plants">
+
       <div class="container">
+
         <div class="section-heading">
-          <div class="eyebrow">Our Collection</div>
-          <h2>Bring Nature Into Your Home</h2>
+
+          <div class="eyebrow">
+            Our Collection
+          </div>
+
+          <h2>
+            Bring Nature Into Your Home
+          </h2>
+
           <p>
             Beautiful indoor plants selected to make your home
             fresher, calmer and more alive.
           </p>
+
         </div>
 
+
         <div class="product-grid">
+
+
+          <!-- Money Plant -->
+
           <article class="product-card">
+
             <div class="product-image">
-              <span class="product-tag">Popular</span>
+
+              <span class="product-tag">
+                Popular
+              </span>
+
               <img
                 src="https://images.unsplash.com/photo-1593691509543-c55fb32e5cee?auto=format&fit=crop&w=800&q=85"
                 alt="Money Plant"
               />
+
             </div>
 
             <div class="product-info">
-              <h3>Money Plant</h3>
+
+              <h3>
+                Money Plant
+              </h3>
+
               <p>
                 A beautiful low-maintenance plant for your living room
                 or workspace.
               </p>
 
               <div class="product-bottom">
-                <div class="price">৳250</div>
+
+                <div class="price">
+                  ৳250
+                </div>
+
                 <a
                   class="order-link"
                   href="https://wa.me/8801705633700?text=I%20want%20to%20order%20Money%20Plant."
@@ -947,28 +1491,48 @@
                 >
                   Order Now →
                 </a>
+
               </div>
+
             </div>
+
           </article>
 
+
+          <!-- Snake Plant -->
+
           <article class="product-card">
+
             <div class="product-image">
-              <span class="product-tag">Easy Care</span>
+
+              <span class="product-tag">
+                Easy Care
+              </span>
+
               <img
                 src="https://images.unsplash.com/photo-1593482892290-f54927ae1bb6?auto=format&fit=crop&w=800&q=85"
                 alt="Snake Plant"
               />
+
             </div>
 
             <div class="product-info">
-              <h3>Snake Plant</h3>
+
+              <h3>
+                Snake Plant
+              </h3>
+
               <p>
                 A stylish indoor plant that needs very little care
                 and looks elegant anywhere.
               </p>
 
               <div class="product-bottom">
-                <div class="price">৳450</div>
+
+                <div class="price">
+                  ৳450
+                </div>
+
                 <a
                   class="order-link"
                   href="https://wa.me/8801705633700?text=I%20want%20to%20order%20Snake%20Plant."
@@ -976,28 +1540,48 @@
                 >
                   Order Now →
                 </a>
+
               </div>
+
             </div>
+
           </article>
 
+
+          <!-- Peace Lily -->
+
           <article class="product-card">
+
             <div class="product-image">
-              <span class="product-tag">Elegant</span>
+
+              <span class="product-tag">
+                Elegant
+              </span>
+
               <img
                 src="https://images.unsplash.com/photo-1593691509543-c55fb32e5cee?auto=format&fit=crop&w=800&q=85"
                 alt="Peace Lily"
               />
+
             </div>
 
             <div class="product-info">
-              <h3>Peace Lily</h3>
+
+              <h3>
+                Peace Lily
+              </h3>
+
               <p>
                 A graceful flowering plant that adds softness and
                 freshness to your home.
               </p>
 
               <div class="product-bottom">
-                <div class="price">৳550</div>
+
+                <div class="price">
+                  ৳550
+                </div>
+
                 <a
                   class="order-link"
                   href="https://wa.me/8801705633700?text=I%20want%20to%20order%20Peace%20Lily."
@@ -1005,28 +1589,48 @@
                 >
                   Order Now →
                 </a>
+
               </div>
+
             </div>
+
           </article>
 
+
+          <!-- Spider Plant -->
+
           <article class="product-card">
+
             <div class="product-image">
-              <span class="product-tag">Fresh</span>
+
+              <span class="product-tag">
+                Fresh
+              </span>
+
               <img
                 src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=800&q=85"
                 alt="Spider Plant"
               />
+
             </div>
 
             <div class="product-info">
-              <h3>Spider Plant</h3>
+
+              <h3>
+                Spider Plant
+              </h3>
+
               <p>
                 A charming green plant that is perfect for desks,
                 shelves and small spaces.
               </p>
 
               <div class="product-bottom">
-                <div class="price">৳350</div>
+
+                <div class="price">
+                  ৳350
+                </div>
+
                 <a
                   class="order-link"
                   href="https://wa.me/8801705633700?text=I%20want%20to%20order%20Spider%20Plant."
@@ -1034,158 +1638,326 @@
                 >
                   Order Now →
                 </a>
+
               </div>
+
             </div>
+
           </article>
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- Features -->
+
+    <!-- =========================
+         FEATURES
+    ========================== -->
+
     <section class="section features">
+
       <div class="container">
+
         <div class="section-heading">
-          <div class="eyebrow">Why Ushar Bagicha</div>
-          <h2>More Than Just Plants</h2>
+
+          <div class="eyebrow">
+            Why Ushar Bagicha
+          </div>
+
+          <h2>
+            More Than Just Plants
+          </h2>
+
           <p>
             We believe every green corner can bring peace, beauty
             and positive energy into your life.
           </p>
+
         </div>
+
 
         <div class="feature-grid">
-          <div class="feature-card">
-            <div class="feature-icon">🌱</div>
-            <h3>Healthy Plants</h3>
-            <p>Carefully selected plants for your home and office.</p>
-          </div>
+
 
           <div class="feature-card">
-            <div class="feature-icon">💚</div>
-            <h3>Grown With Love</h3>
-            <p>Every plant is handled with patience and attention.</p>
+
+            <div class="feature-icon">
+              🌱
+            </div>
+
+            <h3>
+              Healthy Plants
+            </h3>
+
+            <p>
+              Carefully selected plants for your home and office.
+            </p>
+
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">🚚</div>
-            <h3>Easy Ordering</h3>
-            <p>Order quickly through WhatsApp from anywhere.</p>
-          </div>
 
           <div class="feature-card">
-            <div class="feature-icon">🌿</div>
-            <h3>Green Lifestyle</h3>
-            <p>Make your surroundings fresher, calmer and greener.</p>
+
+            <div class="feature-icon">
+              💚
+            </div>
+
+            <h3>
+              Grown With Love
+            </h3>
+
+            <p>
+              Every plant is handled with patience and attention.
+            </p>
+
           </div>
+
+
+          <div class="feature-card">
+
+            <div class="feature-icon">
+              🚚
+            </div>
+
+            <h3>
+              Easy Ordering
+            </h3>
+
+            <p>
+              Order quickly through WhatsApp from anywhere.
+            </p>
+
+          </div>
+
+
+          <div class="feature-card">
+
+            <div class="feature-icon">
+              🌿
+            </div>
+
+            <h3>
+              Green Lifestyle
+            </h3>
+
+            <p>
+              Make your surroundings fresher, calmer and greener.
+            </p>
+
+          </div>
+
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- Plant Care -->
+
+    <!-- =========================
+         PLANT CARE
+    ========================== -->
+
     <section class="section care" id="care">
+
       <div class="container">
+
         <div class="section-heading">
-          <div class="eyebrow">Simple Plant Care</div>
-          <h2>Help Your Plants Bloom</h2>
+
+          <div class="eyebrow">
+            Simple Plant Care
+          </div>
+
+          <h2>
+            Help Your Plants Bloom
+          </h2>
+
           <p>
             A little care every day can keep your plants beautiful
             and healthy.
           </p>
+
         </div>
 
+
         <div class="care-grid">
+
+
           <div class="care-card">
-            <span>☀️</span>
-            <h3>Right Sunlight</h3>
+
+            <span>
+              ☀️
+            </span>
+
+            <h3>
+              Right Sunlight
+            </h3>
+
             <p>
               Place your plant where it receives suitable indirect
               sunlight according to its variety.
             </p>
+
           </div>
 
+
           <div class="care-card">
-            <span>💧</span>
-            <h3>Proper Watering</h3>
+
+            <span>
+              💧
+            </span>
+
+            <h3>
+              Proper Watering
+            </h3>
+
             <p>
               Water when the soil feels slightly dry. Avoid keeping
               the roots constantly soaked.
             </p>
+
           </div>
 
+
           <div class="care-card">
-            <span>🪴</span>
-            <h3>Good Soil</h3>
+
+            <span>
+              🪴
+            </span>
+
+            <h3>
+              Good Soil
+            </h3>
+
             <p>
               Use well-draining soil and a pot with drainage holes
               to support healthy root growth.
             </p>
+
           </div>
+
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- Gallery -->
+
+    <!-- =========================
+         GALLERY
+    ========================== -->
+
     <section class="section gallery" id="gallery">
+
       <div class="container">
+
         <div class="section-heading">
-          <div class="eyebrow">Our Green World</div>
-          <h2>A Little Green Inspiration</h2>
+
+          <div class="eyebrow">
+            Our Green World
+          </div>
+
+          <h2>
+            A Little Green Inspiration
+          </h2>
+
           <p>
             Create a peaceful and beautiful corner with nature.
           </p>
+
         </div>
 
+
         <div class="gallery-grid">
+
+
           <div class="gallery-item">
+
             <img
               src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1000&q=85"
               alt="Green indoor plants"
             />
+
           </div>
 
+
           <div class="gallery-item">
+
             <img
               src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=800&q=85"
               alt="Plant in a pot"
             />
+
           </div>
 
+
           <div class="gallery-item">
+
             <img
               src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=85"
               alt="Beautiful plant leaves"
             />
+
           </div>
 
+
           <div class="gallery-item">
+
             <img
               src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?auto=format&fit=crop&w=800&q=85"
               alt="Plants at home"
             />
+
           </div>
 
+
           <div class="gallery-item">
+
             <img
               src="https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?auto=format&fit=crop&w=800&q=85"
               alt="Small potted plants"
             />
+
           </div>
+
+
         </div>
+
       </div>
+
     </section>
 
-    <!-- Contact -->
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
     <section class="section contact" id="contact">
+
       <div class="container">
+
         <div class="contact-box">
+
           <div>
-            <div class="eyebrow">Let’s Grow Together</div>
-            <h2>Bring a Little Love Home</h2>
+
+            <div class="eyebrow">
+              Let’s Grow Together
+            </div>
+
+            <h2>
+              Bring a Little Love Home
+            </h2>
+
             <p>
               Choose your favorite plant and send us a message.
               We will help you find the perfect green companion.
             </p>
+
           </div>
+
 
           <a
             class="btn btn-light"
@@ -1194,19 +1966,37 @@
           >
             Chat on WhatsApp →
           </a>
+
         </div>
+
       </div>
+
     </section>
+
   </main>
 
-  <!-- Footer -->
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer>
+
     <div class="container">
+
       <div class="footer-grid">
+
+
         <div class="footer-brand">
+
           <a href="#home" class="logo">
+
             USHAR BAGICHA
-            <span>GREEN LIVING</span>
+
+            <span>
+              GREEN LIVING
+            </span>
+
           </a>
 
           <p>
@@ -1214,58 +2004,163 @@
             beauty of nature.
           </p>
 
+
           <div class="socials">
-            <a href="#" aria-label="Facebook">f</a>
-            <a href="#" aria-label="Instagram">◎</a>
-            <a href="#" aria-label="YouTube">▶</a>
+
+            <a
+              href="#"
+              aria-label="Facebook"
+            >
+              f
+            </a>
+
+            <a
+              href="#"
+              aria-label="Instagram"
+            >
+              ◎
+            </a>
+
+            <a
+              href="#"
+              aria-label="YouTube"
+            >
+              ▶
+            </a>
+
           </div>
+
         </div>
 
-        <div>
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#plants">Plants</a></li>
-            <li><a href="#story">Our Story</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-          </ul>
-        </div>
 
         <div>
-          <h3>Plant Care</h3>
-          <ul>
-            <li><a href="#care">Sunlight Guide</a></li>
-            <li><a href="#care">Watering Tips</a></li>
-            <li><a href="#care">Soil Guide</a></li>
-            <li><a href="#contact">Get Support</a></li>
-          </ul>
-        </div>
 
-        <div>
-          <h3>Contact</h3>
+          <h3>
+            Quick Links
+          </h3>
+
           <ul>
-            <li>📞 +880 1705-633700</li>
-            <li>📍 Moulvibazar Sadar, Bangladesh</li>
-            <li>🕒 10:00 AM – 8:00 PM</li>
+
             <li>
+              <a href="#home">
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a href="#plants">
+                Plants
+              </a>
+            </li>
+
+            <li>
+              <a href="#story">
+                Our Story
+              </a>
+            </li>
+
+            <li>
+              <a href="#gallery">
+                Gallery
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Plant Care
+          </h3>
+
+          <ul>
+
+            <li>
+              <a href="#care">
+                Sunlight Guide
+              </a>
+            </li>
+
+            <li>
+              <a href="#care">
+                Watering Tips
+              </a>
+            </li>
+
+            <li>
+              <a href="#care">
+                Soil Guide
+              </a>
+            </li>
+
+            <li>
+              <a href="#contact">
+                Get Support
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Contact
+          </h3>
+
+          <ul>
+
+            <li>
+              📞 +880 1705-633700
+            </li>
+
+            <li>
+              📍 Moulvibazar Sadar, Bangladesh
+            </li>
+
+            <li>
+              🕒 10:00 AM – 8:00 PM
+            </li>
+
+            <li>
+
               <a
                 href="https://wa.me/8801705633700"
                 target="_blank"
               >
                 WhatsApp Us
               </a>
+
             </li>
+
           </ul>
+
         </div>
+
+
       </div>
+
 
       <div class="copyright">
+
         © 2026 Ushar Bagicha. All Rights Reserved.
+
       </div>
+
     </div>
+
   </footer>
 
-  <!-- Floating WhatsApp -->
+
+  <!-- =========================
+       FLOATING WHATSAPP
+  ========================== -->
+
   <a
     class="whatsapp-float"
     href="https://wa.me/8801705633700?text=Hello%20Ushar%20Bagicha%2C%20I%20want%20to%20order%20a%20plant."
@@ -1275,19 +2170,40 @@
     ☎
   </a>
 
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
   <script>
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
+
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
 
     menuToggle.addEventListener("click", () => {
+
       navLinks.classList.toggle("show");
+
     });
 
-    document.querySelectorAll(".nav-links a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("show");
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+          navLinks.classList.remove("show");
+
+        });
+
       });
-    });
+
   </script>
+
 </body>
 </html>
