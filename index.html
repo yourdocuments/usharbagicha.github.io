@@ -1,0 +1,1089 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ushar Bagicha | Indoor Plants & Green Living</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green: #527b48;
+  --dark-green: #173d2a;
+  --cream: #f7f5ed;
+  --gold: #c6a15b;
+  --text: #26352a;
+  --muted: #727c72;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.container {
+  width: min(1150px, 92%);
+  margin: auto;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 25px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+  border: 1px solid var(--green);
+  transition: .25s;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: white;
+}
+
+.btn-outline {
+  color: white;
+  border-color: var(--gold);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: var(--dark-green);
+}
+
+.section {
+  padding: 65px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  color: var(--dark-green);
+}
+
+.section-title p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+/* Header */
+header {
+  height: 90px;
+  background: #102d20;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  flex-shrink: 0;
+}
+
+.logo strong {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  letter-spacing: 1px;
+  color: #f5f0df;
+}
+
+.logo small {
+  font-size: 9px;
+  color: #c9b77e;
+  letter-spacing: 3px;
+  margin-top: 5px;
+}
+
+.logo .leaf {
+  color: #a7c78b;
+  font-size: 22px;
+  margin-bottom: 3px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nav-links a {
+  padding: 10px 0;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #c9b77e;
+  transition: .25s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.order-btn {
+  background: #c9a45c;
+  border-color: #c9a45c;
+  color: #14291e;
+  padding: 11px 22px;
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  color: white;
+  border: 1px solid #718374;
+  padding: 7px 12px;
+  font-size: 20px;
+  border-radius: 4px;
+}
+
+/* Hero */
+.hero {
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(13,38,25,.96) 0%, rgba(13,38,25,.82) 38%, rgba(13,38,25,.18) 100%),
+    url("https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=1800&q=85") center/cover;
+}
+
+.hero-content {
+  max-width: 520px;
+  color: white;
+  padding: 50px 0;
+}
+
+.hero-script {
+  color: #d4bb7d;
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 29px;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(43px, 5vw, 67px);
+  line-height: 1.08;
+  margin: 5px 0 12px;
+  letter-spacing: 1px;
+}
+
+.hero-subtitle {
+  font-size: 19px;
+  color: #c9d9b7;
+  letter-spacing: 4px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 14px;
+  color: #e1e8df;
+  max-width: 360px;
+  margin-bottom: 25px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* About */
+.about {
+  background: var(--cream);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: var(--green);
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 21px;
+}
+
+.about h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 34px;
+  line-height: 1.2;
+  margin: 10px 0 15px;
+  color: var(--dark-green);
+}
+
+.gold-line {
+  width: 45px;
+  height: 2px;
+  background: var(--gold);
+  margin: 15px 0;
+}
+
+.about p {
+  font-size: 13px;
+  color: var(--muted);
+  max-width: 360px;
+  margin-bottom: 20px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.feature {
+  text-align: center;
+  padding: 5px 25px;
+  border-right: 1px solid #dedfd5;
+}
+
+.feature:last-child { border-right: none; }
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  border: 1px solid #d5ddce;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 31px;
+  margin-bottom: 13px;
+}
+
+.feature h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  color: var(--dark-green);
+  margin-bottom: 8px;
+}
+
+.feature p {
+  font-size: 12px;
+  line-height: 1.6;
+  max-width: 170px;
+  margin: auto;
+}
+
+/* Plants */
+.plants {
+  background: white;
+}
+
+.plants-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+}
+
+.plant-card {
+  border: 1px solid #e4e6de;
+  border-radius: 10px;
+  overflow: hidden;
+  background: white;
+  transition: .25s;
+}
+
+.plant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(32,61,39,.1);
+}
+
+.plant-image {
+  height: 210px;
+  overflow: hidden;
+  position: relative;
+}
+
+.plant-image img {
+  height: 100%;
+  transition: .3s;
+}
+
+.plant-card:hover img {
+  transform: scale(1.06);
+}
+
+.plant-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #e0e9d5;
+  color: #31532e;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 9px;
+  border-radius: 20px;
+}
+
+.plant-info {
+  padding: 15px;
+}
+
+.plant-info h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 17px;
+  color: var(--dark-green);
+}
+
+.plant-info p {
+  color: var(--muted);
+  font-size: 12px;
+  margin: 3px 0 7px;
+}
+
+.price {
+  color: var(--green);
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.price::before {
+  content: "৳ ";
+}
+
+.plant-btn {
+  width: 100%;
+  padding: 9px;
+  font-size: 12px;
+}
+
+/* Why Choose Us */
+.why {
+  background:
+    linear-gradient(rgba(17,52,34,.96), rgba(17,52,34,.96)),
+    url("https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=1800&q=80") center/cover;
+  color: white;
+  padding: 50px 0;
+}
+
+.why .section-title h2 {
+  color: white;
+}
+
+.why .section-title p {
+  color: #c6d3c6;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.why-item {
+  text-align: center;
+  padding: 10px 25px;
+  border-right: 1px solid rgba(255,255,255,.2);
+}
+
+.why-item:last-child { border-right: none; }
+
+.why-icon {
+  font-size: 31px;
+  color: #d5bd80;
+  margin-bottom: 8px;
+}
+
+.why-item h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.why-item p {
+  font-size: 12px;
+  color: #c2d0c3;
+}
+
+/* Gallery */
+.gallery {
+  background: white;
+  padding-top: 55px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.gallery-item {
+  height: 115px;
+  overflow: hidden;
+  border-radius: 9px;
+}
+
+.gallery-item img {
+  height: 100%;
+  transition: .3s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Contact */
+.contact {
+  background: var(--cream);
+}
+
+.contact-box {
+  background: #e9eee4;
+  padding: 35px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.contact-box h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 29px;
+  color: var(--dark-green);
+  margin-bottom: 10px;
+}
+
+.contact-box p {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background: #10251a;
+  color: #dce4da;
+  padding: 30px 0 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.3fr 1fr;
+  gap: 25px;
+  padding-bottom: 25px;
+}
+
+.footer-column {
+  padding-right: 20px;
+  border-right: 1px solid #35483a;
+}
+
+.footer-column:last-child {
+  border-right: none;
+}
+
+.footer-column h3 {
+  font-size: 14px;
+  color: #f4f0df;
+  margin-bottom: 12px;
+}
+
+.footer-column p,
+.footer-links a,
+.contact-item {
+  color: #aebcaf;
+  font-size: 12px;
+}
+
+.footer-links {
+  list-style: none;
+  display: grid;
+  gap: 5px;
+}
+
+.footer-links a:hover {
+  color: #d8bd7a;
+}
+
+.contact-item {
+  display: flex;
+  gap: 10px;
+  margin: 8px 0;
+}
+
+.contact-item span {
+  color: #d2b56f;
+}
+
+.socials {
+  display: flex;
+  gap: 9px;
+  margin-top: 13px;
+}
+
+.socials a {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #526556;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.socials a:hover {
+  background: var(--green);
+}
+
+.copyright {
+  border-top: 1px solid #304535;
+  text-align: center;
+  color: #819181;
+  font-size: 10px;
+  padding: 10px 0;
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+  .nav-links { gap: 17px; }
+  .plants-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+  .about-grid { gap: 30px; }
+}
+
+@media (max-width: 700px) {
+  header { height: 76px; }
+
+  .logo strong { font-size: 21px; }
+  .logo small { font-size: 8px; }
+
+  .menu-toggle { display: block; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    background: #102d20;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 5%;
+  }
+
+  .nav-links.show { display: flex; }
+
+  .nav-links a {
+    padding: 12px 0;
+    border-bottom: 1px solid #2b4635;
+  }
+
+  .nav-links a::after { display: none; }
+
+  .order-btn { display: none; }
+
+  .hero {
+    min-height: 480px;
+  }
+
+  .hero h1 { font-size: 44px; }
+
+  .hero-subtitle {
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about p { max-width: 100%; }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .feature {
+    border-right: none;
+    border-bottom: 1px solid #dedfd5;
+    padding-bottom: 22px;
+  }
+
+  .feature:last-child { border-bottom: none; }
+
+  .plants-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .plant-image { height: 180px; }
+
+  .plant-info { padding: 12px; }
+
+  .plant-info h3 { font-size: 15px; }
+
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 0;
+  }
+
+  .why-item {
+    border-right: none;
+    padding: 10px 12px;
+  }
+
+  .why-item:nth-child(odd) {
+    border-right: 1px solid rgba(255,255,255,.2);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-item { height: 130px; }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 15px;
+  }
+
+  .footer-column {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .contact-box { padding: 28px 20px; }
+}
+
+@media (max-width: 380px) {
+  .plants-grid { grid-template-columns: 1fr; }
+  .plant-image { height: 230px; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Header -->
+<header>
+  <div class="container nav">
+
+    <a href="#home" class="logo">
+      <span class="leaf">🌿</span>
+      <strong>USHAR BAGICHA</strong>
+      <small>— GREEN LIVING —</small>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="active">Home</a>
+      <a href="#plants">Plants</a>
+      <a href="#about">About Us</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#plants" class="btn order-btn">Order Now 🛒</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+
+  </div>
+</header>
+
+
+<!-- Hero -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+
+      <div class="hero-script">Welcome to</div>
+
+      <h1>USHAR<br>BAGICHA</h1>
+
+      <div class="hero-subtitle">INDOOR PLANTS & GREEN LIVING</div>
+
+      <p>
+        Bring nature into your home with beautiful
+        indoor plants, thoughtful care and a greener
+        everyday lifestyle.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#plants" class="btn btn-primary">Explore Plants 🌿</a>
+        <a href="#contact" class="btn btn-outline">Order Now 🛒</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- About Us -->
+<section class="section about" id="about">
+  <div class="container about-grid">
+
+    <div>
+      <div class="eyebrow">About Ushar Bagicha</div>
+
+      <h2>Grow Green<br>Live Beautiful</h2>
+
+      <div class="gold-line"></div>
+
+      <p>
+        Ushar Bagicha is a small indoor plant shop
+        dedicated to bringing natural beauty into
+        your home and workspace. We offer beautiful
+        plants and simple green-living solutions
+        for every plant lover.
+      </p>
+
+      <a href="#plants" class="btn btn-primary">Explore More →</a>
+    </div>
+
+    <div class="features">
+
+      <div class="feature">
+        <div class="feature-icon">🌱</div>
+        <h3>Fresh Plants</h3>
+        <p>Healthy and beautiful plants for your home.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">🪴</div>
+        <h3>Beautiful Pots</h3>
+        <p>Decorative pots to match your interior.</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">💚</div>
+        <h3>Friendly Service</h3>
+        <p>Helping you choose the right plants.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Plants -->
+<section class="section plants" id="plants">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Our Popular Plants</h2>
+      <p>Bring a little more green into your life.</p>
+    </div>
+
+    <div class="plants-grid">
+
+      <article class="plant-card">
+        <div class="plant-image">
+          <span class="plant-tag">Popular</span>
+          <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=700&q=85" alt="Money Plant" loading="lazy">
+        </div>
+        <div class="plant-info">
+          <h3>Money Plant</h3>
+          <p>Easy-care indoor greenery</p>
+          <div class="price">250</div>
+          <a href="https://wa.me/8801705633700?text=I%20want%20to%20order%20Money%20Plant%20from%20Ushar%20Bagicha." class="btn btn-primary plant-btn">Order on WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="plant-card">
+        <div class="plant-image">
+          <span class="plant-tag">Best Seller</span>
+          <img src="https://images.unsplash.com/photo-1593482892290-f54927ae1bb6?auto=format&fit=crop&w=700&q=85" alt="Snake Plant" loading="lazy">
+        </div>
+        <div class="plant-info">
+          <h3>Snake Plant</h3>
+          <p>Elegant and low maintenance</p>
+          <div class="price">450</div>
+          <a href="https://wa.me/8801705633700?text=I%20want%20to%20order%20Snake%20Plant%20from%20Ushar%20Bagicha." class="btn btn-primary plant-btn">Order on WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="plant-card">
+        <div class="plant-image">
+          <span class="plant-tag">New</span>
+          <img src="https://images.unsplash.com/photo-1593691509543-c55fb32e5cee?auto=format&fit=crop&w=700&q=85" alt="Peace Lily" loading="lazy">
+        </div>
+        <div class="plant-info">
+          <h3>Peace Lily</h3>
+          <p>Elegant indoor flowering plant</p>
+          <div class="price">550</div>
+          <a href="https://wa.me/8801705633700?text=I%20want%20to%20order%20Peace%20Lily%20from%20Ushar%20Bagicha." class="btn btn-primary plant-btn">Order on WhatsApp</a>
+        </div>
+      </article>
+
+      <article class="plant-card">
+        <div class="plant-image">
+          <span class="plant-tag">Trending</span>
+          <img src="https://images.unsplash.com/photo-1616766141807-0b7b7c6d4a2c?auto=format&fit=crop&w=700&q=85" alt="Spider Plant" loading="lazy">
+        </div>
+        <div class="plant-info">
+          <h3>Spider Plant</h3>
+          <p>Perfect for home and office</p>
+          <div class="price">350</div>
+          <a href="https://wa.me/8801705633700?text=I%20want%20to%20order%20Spider%20Plant%20from%20Ushar%20Bagicha." class="btn btn-primary plant-btn">Order on WhatsApp</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div style="text-align:center;margin-top:30px;">
+      <a href="#contact" class="btn btn-primary">View All Plants →</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Why Choose Us -->
+<section class="why">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Why Choose Us</h2>
+      <p>Small plants, beautiful changes.</p>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-item">
+        <div class="why-icon">🌿</div>
+        <h3>Healthy Plants</h3>
+        <p>We care about plant quality.</p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">🏡</div>
+        <h3>Home Décor</h3>
+        <p>Make your space more beautiful.</p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">💰</div>
+        <h3>Affordable Price</h3>
+        <p>Green living for every budget.</p>
+      </div>
+
+      <div class="why-item">
+        <div class="why-icon">🤝</div>
+        <h3>Friendly Support</h3>
+        <p>We help you choose your plants.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Gallery -->
+<section class="section gallery" id="gallery">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Our Green Gallery</h2>
+      <p>A glimpse of our green world.</p>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=600&q=85" alt="Indoor plant" loading="lazy">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=85" alt="Green plants" loading="lazy">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=600&q=85" alt="Tropical plants" loading="lazy">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=600&q=85" alt="Potted plant" loading="lazy">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=600&q=85" alt="Home plants" loading="lazy">
+      </div>
+
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1598880940080-ff9a29891b85?auto=format&fit=crop&w=600&q=85" alt="Decorative plant" loading="lazy">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Contact -->
+<section class="section contact" id="contact">
+  <div class="container">
+
+    <div class="contact-box">
+      <h2>Bring Nature Home</h2>
+
+      <p>
+        Choose your favorite plants and make
+        your home a little greener today.
+      </p>
+
+      <a href="https://wa.me/8801705633700?text=Assalamu%20Alaikum%2C%20I%20want%20to%20order%20plants%20from%20Ushar%20Bagicha." class="btn btn-primary">
+        Order via WhatsApp 🌿
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-column">
+        <a href="#home" class="logo">
+          <span class="leaf">🌿</span>
+          <strong>USHAR BAGICHA</strong>
+          <small>— GREEN LIVING —</small>
+        </a>
+
+        <p style="margin-top:12px;">
+          Bringing nature closer to you.
+          Grow green, live beautiful.
+        </p>
+
+        <div class="socials">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+          <a href="https://wa.me/8801705633700" aria-label="WhatsApp">◉</a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#plants">Plants</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+
+        <div class="contact-item">
+          <span>☎</span>
+          <div>+880 1705-633700</div>
+        </div>
+
+        <div class="contact-item">
+          <span>⌖</span>
+          <div>Moulvibazar Sadar,<br>Sylhet, Bangladesh</div>
+        </div>
+
+        <div class="contact-item">
+          <span>◷</span>
+          <div>10:00 AM – 8:00 PM</div>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+
+        <p>
+          Follow Ushar Bagicha for
+          new plants and updates.
+        </p>
+
+        <div class="socials">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">◎</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Ushar Bagicha. All Rights Reserved.
+    </div>
+
+  </div>
+</footer>
+
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+  });
+});
+</script>
+
+</body>
+</html>
